@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background:url(images/Preview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+/* logo */
+.logo {
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+  width: 70px;
+}
+/* main container becuse of make down scroll arrow */
+.main-container {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+/* this container because of insert chat text div */
+.container {
+  max-width: 900px;
+  margin: auto;
+  height: 70vh;
+  overflow-y: scroll;
+  border: 3px solid rgb(222, 223, 223);
+  border-radius: 5px;
+  background-color: #e7e4e4;
+  box-shadow: 2px 2px 5px black;
+}
+/* make custom scroll bar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: rgb(18, 133, 8);
+  border-radius: 5px;
+}
+/* a div class which is created by js and because of insert text  */
+.msg {
+  padding: 10px;
+  margin: 20px 10px;
+  background-color: rgba(9, 216, 33, 0.598);
+  max-width: 50%;
+  border: 2px solid rgb(2, 77, 2);
+  border-radius: 10px;
+  clear: both;
+  color: white;
+  font-size: 1.07em;
+  word-break: break-all;
+  font-family: 'Roboto', sans-serif;
+}
+/* make chat text positon left or right */
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
+/* set position for input box and button */
+.send {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+/* form width */
+#send-container {
+  width: 900px;
+}
+/* input box */
+.inp {
+  width: 91.2%;
+  padding: 10px 0;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px black;
+
+} 
+/* submit button */
+.btn {
+  width: 7.2%;
+  padding: 10px 2px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  color: white;
+  background:linear-gradient(rgb(2, 163, 2),rgb(16, 223, 16),rgb(61, 240, 61));
+  text-shadow: 3px 3px 2px rgb(4, 75, 4);
+  box-shadow: 1px 1px 3px black;
+
+}
+/* make button hover */
+.btn:hover{
+  text-shadow: 4px 4px 2px rgb(4, 75, 4);
+  font-size: 1.02rem;
+  
+}
+/* design doen scroll arrow */
+#down-scroll {
+  rotate: 180deg;
+  padding: 6px 13px;
+  color: white;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  background-color: green;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+  display: none;
+  cursor: pointer;
+}
+
+/* use media screen */
+
+@media screen and (max-width:699px){
+  /* input box */
+  .inp {
+    width: 83%;
+  }
+  /* submit button */
+  .btn {
+    width: 12%;
+}
+}
+@media screen and (max-width:450px){
+  /* input box */
+  .inp {
+    width: 80%;
+  }
+  /* submit button */
+  .btn {
+    width: 15%;
+  }
+}
+@media screen and (max-width:300px){
+  /* submit button */
+  .btn{
+    font-size: 0.6rem;
+  }
+}
+
+/* chat timming  */
+.time{
+  color: rgb(4, 23, 73);
+  font-size: 0.8rem;
+
+}
+/* make sender reciever or new user on joined name colorfull */
+.name{
+  color:rgb(3, 7, 125);
+  font-size: 1rem;
+}
+/* a user who leave the chat make its name red */
+.leave-user{
+  color:red;
+}

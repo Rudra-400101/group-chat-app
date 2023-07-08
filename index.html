@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>real time chat app</title>
+    
+    <!-- use defer because firstly load html document and then js files -->
+    <script  defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script  defer src="client.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- robotic font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- header of chat app -->
+
+    <nav>
+      <img class="logo" src="images/chatlogo.png" alt="" />
+      <center>
+        <h2 style="text-decoration: underline">GROUP CHAT APP</h2>
+      </center>
+    </nav>
+
+    <!-- first div container because of center main container -->
+    <div style="margin-top: 7px">
+      <!-- second div container because of make scroll down arrow -->
+      <div class="main-container">
+        <!-- scroll down button -->
+        <span id="down-scroll" onclick="bottomarrow()">^</span>
+        <!-- third div container because of insert text -->
+        <div class="container" id="text-container"></div>
+      </div>
+    </div>
+
+    <!-- take input from user  -->
+
+    <div class="send">
+      <form action="" id="send-container">
+        <input type="text" class="inp" id="messegeinp" />
+        <input type="submit" class="btn" />
+      </form>
+    </div>
+  </body>
+</html>
